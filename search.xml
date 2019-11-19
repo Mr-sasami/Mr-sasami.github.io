@@ -23,6 +23,25 @@
     
     
     <entry>
+      <title>Photo_Test</title>
+      <link href="/2019/11/15/Photo_Test/"/>
+      <url>/2019/11/15/Photo_Test/</url>
+      
+        <content type="html"><![CDATA[<p>#照片测试<br><img src="https://i.pximg.net/img-master/img/2019/11/19/00/59/08/77885155_p0_master1200.jpg" alt="views"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Test </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/11/13/hello-world/"/>
       <url>/2019/11/13/hello-world/</url>
