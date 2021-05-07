@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>yilia-theme-open-with-a-blank-page-on-firefox | secret base</title>
+  <title>yilia在火狐时点击触发弹出空页面 | secret base</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浏览器访问博客某些链接会弹出空页面的问题问题1：使用hexo构建了自己的小网站之后，使用火狐阅览器在点击友链执行动作时会出现新的空页面。">
+  <meta name="description" content="yilia在火狐时点击触发弹出空页面原因：浏览器默认处理事件的顺序有差异。Chrome顺序：onclick -&amp;gt; href -&amp;gt; targetIE和Firefox顺序：onclick -&amp;gt; target -&amp;gt; href 解决方法：添加onclick事件，直接return false阻止之后浏览器默认事件的执行。">
 <meta name="keywords" content="programming">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yilia-theme-open-with-a-blank-page-on-firefox">
+<meta property="og:title" content="yilia在火狐时点击触发弹出空页面">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;%E7%81%AB%E7%8B%90%E7%BD%91%E9%A1%B5%E6%89%A7%E8%A1%8C%E5%8A%A8%E4%BD%9C%E8%B7%B3%E8%BD%AC%E7%A9%BA%E9%A1%B5%E9%9D%A2&#x2F;index.html">
 <meta property="og:site_name" content="secret base">
-<meta property="og:description" content="浏览器访问博客某些链接会弹出空页面的问题问题1：使用hexo构建了自己的小网站之后，使用火狐阅览器在点击友链执行动作时会出现新的空页面。">
+<meta property="og:description" content="yilia在火狐时点击触发弹出空页面原因：浏览器默认处理事件的顺序有差异。Chrome顺序：onclick -&amp;gt; href -&amp;gt; targetIE和Firefox顺序：onclick -&amp;gt; target -&amp;gt; href 解决方法：添加onclick事件，直接return false阻止之后浏览器默认事件的执行。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2021-05-06T07:44:33.470Z">
+<meta property="og:updated_time" content="2021-05-07T12:44:28.044Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="secret base" type="application/atom+xml">
@@ -146,7 +146,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      yilia-theme-open-with-a-blank-page-on-firefox
+      yilia在火狐时点击触发弹出空页面
     </h1>
   
 
@@ -159,12 +159,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="浏览器访问博客某些链接会弹出空页面的问题"><a href="#浏览器访问博客某些链接会弹出空页面的问题" class="headerlink" title="浏览器访问博客某些链接会弹出空页面的问题"></a>浏览器访问博客某些链接会弹出空页面的问题</h1><h2 id="问题1："><a href="#问题1：" class="headerlink" title="问题1："></a>问题1：</h2><p>使用hexo构建了自己的小网站之后，使用火狐阅览器在点击友链执行动作时会出现新的空页面。</p>
-<a id="more"></a>
-
-<blockquote>
-<p>可能的原因：<br>浏览器默认处理事件的顺序有差异。<br>Chrome顺序：onclick -&gt; href -&gt; target<br>IE和Firefox顺序：onclick -&gt; target -&gt; href</p>
-</blockquote>
+        <h1 id="yilia在火狐时点击触发弹出空页面"><a href="#yilia在火狐时点击触发弹出空页面" class="headerlink" title="yilia在火狐时点击触发弹出空页面"></a>yilia在火狐时点击触发弹出空页面</h1><p>原因：<br>浏览器默认处理事件的顺序有差异。<br>Chrome顺序：onclick -&gt; href -&gt; target<br>IE和Firefox顺序：onclick -&gt; target -&gt; href</p>
 <p>解决方法：添加onclick事件，直接return false阻止之后浏览器默认事件的执行。</p>
 
       
