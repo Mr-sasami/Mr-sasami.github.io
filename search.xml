@@ -30,18 +30,6 @@
         <content type="html"><![CDATA[<h1 id="yilia在火狐时点击触发弹出空页面"><a href="#yilia在火狐时点击触发弹出空页面" class="headerlink" title="yilia在火狐时点击触发弹出空页面"></a>yilia在火狐时点击触发弹出空页面</h1><p>原因：<br>浏览器默认处理事件的顺序有差异。<br>Chrome顺序：onclick -&gt; href -&gt; target<br>IE和Firefox顺序：onclick -&gt; target -&gt; href</p><p>解决方法：添加onclick事件，直接return false阻止之后浏览器默认事件的执行。</p>]]></content>
       
       
-      <categories>
-          
-          <category> blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> programming </tag>
-            
-        </tags>
       
     </entry>
     
@@ -73,12 +61,6 @@
       
         <content type="html"><![CDATA[<ul><li><a href="#这是一级标题">这是一级标题</a><ul><li><a href="#这是二级标题">这是二级标题</a><ul><li><a href="#这是三级标题">这是三级标题</a><ul><li><a href="#这是四级标题">这是四级标题</a><ul><li><a href="#这是五级标题">这是五级标题</a><ul><li><a href="#这是六级标题">这是六级标题</a><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><a id="more"></a><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em>`<br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del></p><blockquote><p>一级引用</p><blockquote><p>二级引用</p><blockquote><blockquote><blockquote><p>:)</p></blockquote></blockquote></blockquote></blockquote></blockquote><hr><hr><hr><hr><p>超链接测试<br><a href="http://www.chienerrant.com/" target="_blank" rel="noopener">某只doge</a></p><ul><li>无序列表1</li></ul><ul><li>无序列表2</li></ul><ul><li>无序列表3      </li></ul><ol><li>有序列表1</li><li>有序列表2</li><li>有序列表3</li></ol><ul><li><p>一级无序列表内容</p><ul><li>二级无序列表内容</li><li>二级无序列表内容</li><li>二级无序列表内容</li></ul></li><li><p>一级无序列表内容</p><ul><li>二级有序列表内容</li><li>二级有序列表内容</li><li>二级有序列表内容</li></ul></li></ul><table><thead><tr><th>X</th><th align="center">Y</th><th align="right">Z</th></tr></thead><tbody><tr><td>1</td><td align="center">2</td><td align="right">3</td></tr><tr><td>4</td><td align="center">5</td><td align="right">6</td></tr></tbody></table><p>一只马<br><code>我是代码</code></p><p>一群马</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一句经过千锤百炼的代码！</span><br><span class="line">System.out.println(&quot;hello world!&quot;);</span><br></pre></td></tr></table></figure><p>流程图</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure><p>啦啦啦</p>]]></content>
       
-      
-      <categories>
-          
-          <category> Test </category>
-          
-      </categories>
       
       
     </entry>
