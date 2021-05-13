@@ -139,6 +139,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-HEXO博客使用MathJax部分渲染出错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/14/HEXO%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8MathJax%E9%83%A8%E5%88%86%E6%B8%B2%E6%9F%93%E5%87%BA%E9%94%99/">HEXO博客使用MathJax部分渲染出错</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/14/HEXO%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8MathJax%E9%83%A8%E5%88%86%E6%B8%B2%E6%9F%93%E5%87%BA%E9%94%99/" class="archive-article-date">
+  	<time datetime="2021-05-13T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="HEXO博客使用MathJax部分渲染出错"><a href="#HEXO博客使用MathJax部分渲染出错" class="headerlink" title="HEXO博客使用MathJax部分渲染出错"></a>HEXO博客使用MathJax部分渲染出错</h2><hr>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>hexo 的部分 mathjax 在渲染的时候由于 markdown 自身的转义会出现渲染错误<br>
+        
+          <a class="article-more-a" href="/2021/05/14/HEXO%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8MathJax%E9%83%A8%E5%88%86%E6%B8%B2%E6%9F%93%E5%87%BA%E9%94%99/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">日常小知识</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-1_the_geometry_of_linear_equations" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -198,7 +271,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">Linear Algebra</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">线性代数</a>
         		</li>
       		
 		</ul>
@@ -270,7 +343,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
@@ -326,8 +399,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="yilia在火狐时点击触发弹出空页面"><a href="#yilia在火狐时点击触发弹出空页面" class="headerlink" title="yilia在火狐时点击触发弹出空页面"></a>yilia在火狐时点击触发弹出空页面</h1><p>原因：<br>浏览器默认处理事件的顺序有差异。<br>Chrome顺序：onclick -&gt; href -&gt; target<br>IE和Firefox顺序：onclick -&gt; target -&gt; href</p>
-<p>解决方法：添加onclick事件，直接return false阻止之后浏览器默认事件的执行。</p>
+        <h2 id="yilia在火狐时点击触发弹出空页面"><a href="#yilia在火狐时点击触发弹出空页面" class="headerlink" title="yilia在火狐时点击触发弹出空页面"></a>yilia在火狐时点击触发弹出空页面</h2><hr>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>浏览器默认处理事件的顺序有差异。<br>Chrome顺序：onclick -&gt; href -&gt; target<br>IE和Firefox顺序：onclick -&gt; target -&gt; href</p>
+<hr>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>添加onclick事件，直接return false阻止之后浏览器默认事件的执行。</p>
 
       
 
@@ -336,6 +411,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">日常小知识</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -386,10 +472,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="照片测试"><a href="#照片测试" class="headerlink" title="照片测试"></a>照片测试</h1>
-        
-          <a class="article-more-a" href="/2019/11/18/Photo_Test/#more">more >></a>
-        
+        <h1 id="照片测试"><a href="#照片测试" class="headerlink" title="照片测试"></a>照片测试</h1><p><img src="https://i.loli.net/2019/11/19/Yy8vbWThmSsUzaw.jpg" alt="20bc31f3181e1f9676e215cf5f0c3413.jpg"></p>
+
       
 
       
@@ -397,18 +481,18 @@
     <div class="article-info article-info-index">
       
       
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Test//" class="article-tag-list-link color5">Test</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">测试</a>
         		</li>
       		
 		</ul>
 	</div>
 
+      
 
       
 
@@ -475,6 +559,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -512,13 +607,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/11/01/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2019/11/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-13T06:29:32.957Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
+        <a href="/2019/11/01/hello-world/" class="archive-article-date">
+  	<time datetime="2019-10-31T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
 </a>
         
       </header>
@@ -527,7 +622,7 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
         
-          <a class="article-more-a" href="/2019/11/13/hello-world/#more">more >></a>
+          <a class="article-more-a" href="/2019/11/01/hello-world/#more">more >></a>
         
       
 
@@ -536,6 +631,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -680,11 +786,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">Linear Algebra</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">线性代数</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">日常小知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">操作系统</a>
               </li>
             
             <div class="clearfix"></div>
