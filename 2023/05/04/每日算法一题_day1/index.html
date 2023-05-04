@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Mr-sasami.github.io">
-  <title>Archives | secret base</title>
+  <title>每日算法一题_day1 | secret base</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="secret base">
-<meta property="og:url" content="https://mr-sasami.github.io/archives/index.html">
+  <meta name="description" content="LeetCode的刷题日常（9.回文数）题目描述给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。  例如，121 是回文，而 123 不是。  示例 1：输入：x &#x3D; 121输出：true 示例 2：输入：x &#x3D; -121输出：false解释：从左向右读, 为 -121 。 从右向左读, 为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日算法一题_day1">
+<meta property="og:url" content="https://mr-sasami.github.io/2023/05/04/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95%E4%B8%80%E9%A2%98_day1/index.html">
 <meta property="og:site_name" content="secret base">
-<meta property="og:description" content="...">
+<meta property="og:description" content="LeetCode的刷题日常（9.回文数）题目描述给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。  例如，121 是回文，而 123 不是。  示例 1：输入：x &#x3D; 121输出：true 示例 2：输入：x &#x3D; -121输出：false解释：从左向右读, 为 -121 。 从右向左读, 为">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-05-03T15:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-04T05:11:05.074Z">
 <meta property="article:author" content="Mr.SASAMI">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="secret base" type="application/atom+xml">
@@ -180,41 +183,152 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-每日算法一题_day1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/04/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95%E4%B8%80%E9%A2%98_day1/" class="archive-article-date">
-        <time datetime="2023-05-03T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/04/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95%E4%B8%80%E9%A2%98_day1/">每日算法一题_day1</a>
-	
+    <h1 class="article-title" itemprop="name">
+      每日算法一题_day1
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/05/04/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95%E4%B8%80%E9%A2%98_day1/" class="archive-article-date">
+        <time datetime="2023-05-03T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-04</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">927字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="LeetCode的刷题日常（9-回文数）"><a href="#LeetCode的刷题日常（9-回文数）" class="headerlink" title="LeetCode的刷题日常（9.回文数）"></a>LeetCode的刷题日常（9.回文数）</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。</p>
+<p>回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<ul>
+<li>例如，121 是回文，而 123 不是。</li>
+</ul>
+<h4 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h4><p>输入：x = 121<br>输出：true</p>
+<h4 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h4><p>输入：x = -121<br>输出：false<br>解释：从左向右读, 为 -121 。 从右向左读, 为 121- </p>
+<h4 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h4><p>输入：x = 10<br>输出：false<br>解释：从右向左读, 为 01 。因此它不是一个回文数。</p>
+<h4 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h4><p>-2^31 &lt;= x &lt;= 2^31 - 1</p>
+<h4 id="进阶：你能不将整数转为字符串来解决这个问题吗？"><a href="#进阶：你能不将整数转为字符串来解决这个问题吗？" class="headerlink" title="进阶：你能不将整数转为字符串来解决这个问题吗？"></a>进阶：你能不将整数转为字符串来解决这个问题吗？</h4><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>对于输入存在负号或多位数中个位为零不可能为回文数，直接返回false。</p>
+<p>对于输入为正，计算输入的逆序数，判断输入和逆序数是否相等并返回。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">bool isPalindrome(int x)&#123;</span><br><span class="line">    if(x &lt; 0 || (x % 10 == 0 &amp;&amp; x != 0))&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int num = x;</span><br><span class="line">    int reverse = 0;</span><br><span class="line">    while (num &gt; 0)&#123;</span><br><span class="line">        reverse = reverse * 10 + num % 10;</span><br><span class="line">        num /= 10;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return reverse == x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果执行出错，原因是没有考虑int类型的输入其生存的逆序数可能存在溢出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int reverse = 0;</span><br></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double reverse = 0;</span><br></pre></td></tr></table></figure>
+<p>执行通过：<br>时间<br>8 ms<br>击败<br>74.80%<br>内存<br>5.9 MB<br>击败<br>21.75%</p>
+<h3 id="官方答案"><a href="#官方答案" class="headerlink" title="官方答案"></a>官方答案</h3><h4 id="解法一：普通解法"><a href="#解法一：普通解法" class="headerlink" title="解法一：普通解法"></a>解法一：普通解法</h4><p>最好理解的一种解法就是先将 整数转为字符串 ，然后将字符串分割为数组，只需要循环数组的一半长度进行判断对应元素是否相等即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isPalindrome(int x) &#123;</span><br><span class="line">        String reversedStr = (new StringBuilder(x + &quot;&quot;)).reverse().toString();</span><br><span class="line">        return (x + &quot;&quot;).equals(reversedStr);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="解法二：进阶解法—数学解法"><a href="#解法二：进阶解法—数学解法" class="headerlink" title="解法二：进阶解法—数学解法"></a>解法二：进阶解法—数学解法</h4><p>通过取整和取余操作获取整数中对应的数字进行比较。</p>
+<p>举个例子：1221 这个数字。</p>
+<p>通过计算 1221 / 1000， 得首位1<br>通过计算 1221 % 10， 可得末位 1<br>进行比较<br>再将 22 取出来继续比较</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isPalindrome(int x) &#123;</span><br><span class="line">        //边界判断</span><br><span class="line">        if (x &lt; 0) return false;</span><br><span class="line">        int div = 1;</span><br><span class="line">        //</span><br><span class="line">        while (x / div &gt;= 10) div *= 10;</span><br><span class="line">        while (x &gt; 0) &#123;</span><br><span class="line">            int left = x / div;</span><br><span class="line">            int right = x % 10;</span><br><span class="line">            if (left != right) return false;</span><br><span class="line">            x = (x % div) / 10;</span><br><span class="line">            div /= 100;</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="解法三：进阶解法—巧妙解法"><a href="#解法三：进阶解法—巧妙解法" class="headerlink" title="解法三：进阶解法—巧妙解法"></a>解法三：进阶解法—巧妙解法</h4><p>直观上来看待回文数的话，就感觉像是将数字进行对折后看能否一一对应。</p>
+<p>所以这个解法的操作就是 取出后半段数字进行翻转。</p>
+<p>这里需要注意的一个点就是由于回文数的位数可奇可偶，所以当它的长度是偶数时，它对折过来应该是相等的；当它的长度是奇数时，那么它对折过来后，有一个的长度需要去掉一位数（除以 10 并取整）。</p>
+<p>具体做法如下：</p>
+<p>每次进行取余操作 （ %10），取出最低的数字：y = x % 10<br>将最低的数字加到取出数的末尾：revertNum = revertNum * 10 + y<br>每取一个最低位数字，x 都要自除以 10<br>判断 x 是不是小于 revertNum ，当它小于的时候，说明数字已经对半或者过半了<br>最后，判断奇偶数情况：如果是偶数的话，revertNum 和 x 相等；如果是奇数的话，最中间的数字就在revertNum 的最低位上，将它除以 10 以后应该和 x 相等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isPalindrome(int x) &#123;</span><br><span class="line">        //思考：这里大家可以思考一下，为什么末尾为 0 就可以直接返回 false</span><br><span class="line">        if (x &lt; 0 || (x % 10 == 0 &amp;&amp; x != 0)) return false;</span><br><span class="line">        int revertedNumber = 0;</span><br><span class="line">        while (x &gt; revertedNumber) &#123;</span><br><span class="line">            revertedNumber = revertedNumber * 10 + x % 10;</span><br><span class="line">            x /= 10;</span><br><span class="line">        &#125;</span><br><span class="line">        return x == revertedNumber || x == revertedNumber / 10;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>感谢投喂猫粮<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Mr.SASAMI
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://Mr-sasami.github.io/2023/05/04/每日算法一题_day1/" title="每日算法一题_day1" target="_blank">https://Mr-sasami.github.io/2023/05/04/每日算法一题_day1/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -226,72 +340,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://mr-sasami.github.io/2023/05/04/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95%E4%B8%80%E9%A2%98_day1/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
+  
+    <a href="/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux操作系统</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-        <time datetime="2022-12-19T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">Linux操作系统</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
 
 
           </div>
@@ -332,8 +481,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
