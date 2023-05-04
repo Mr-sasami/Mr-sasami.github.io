@@ -10,19 +10,19 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Linux基本指令基础命令">
+  <meta name="description" content="Linux基本指令基础命令Linux系统的命令通常都是如下所示的格式： 1命令名称 [命名参数] [命令对象]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux操作系统">
 <meta property="og:url" content="https://mr-sasami.github.io/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="secret base">
-<meta property="og:description" content="Linux基本指令基础命令">
+<meta property="og:description" content="Linux基本指令基础命令Linux系统的命令通常都是如下所示的格式： 1命令名称 [命名参数] [命令对象]">
 <meta property="og:locale">
 <meta property="og:image" content="https://mr-sasami.github.io/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/res/file-mode.png">
 <meta property="og:image" content="https://mr-sasami.github.io/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/res/vim-diff.png">
 <meta property="og:image" content="https://mr-sasami.github.io/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/res/vim-multi-window.png">
 <meta property="og:image" content="https://mr-sasami.github.io/2022/12/20/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/res/vim-macro.png">
 <meta property="article:published_time" content="2022-12-19T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-08T10:01:11.940Z">
+<meta property="article:modified_time" content="2023-05-04T05:28:41.494Z">
 <meta property="article:author" content="Mr.SASAMI">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
@@ -241,9 +241,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="Linux基本指令"><a href="#Linux基本指令" class="headerlink" title="Linux基本指令"></a>Linux基本指令</h2><h3 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h3><span id="more"></span>
-<p>Linux系统的命令通常都是如下所示的格式：</p>
+    <h2 id="Linux基本指令"><a href="#Linux基本指令" class="headerlink" title="Linux基本指令"></a>Linux基本指令</h2><h3 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h3><p>Linux系统的命令通常都是如下所示的格式：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令名称 [命名参数] [命令对象]</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <ol>
 <li><p>获取登录信息 - <strong>w</strong> / <strong>who</strong> / <strong>last</strong>/ <strong>lastb</strong>。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root ~]# w</span><br><span class="line"> 23:31:16 up 12:16,  2 users,  load average: 0.00, 0.01, 0.05</span><br><span class="line">USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT</span><br><span class="line">root     pts/0    182.139.66.250   23:03    4.00s  0.02s  0.00s w</span><br><span class="line">jackfrue pts/1    182.139.66.250   23:26    3:56   0.00s  0.00s -bash</span><br><span class="line">[root ~]# who</span><br><span class="line">root     pts/0        2018-04-12 23:03 (182.139.66.250)</span><br><span class="line">jackfrued pts/1        2018-04-12 23:26 (182.139.66.250)</span><br><span class="line">[root ~]# who am i</span><br><span class="line">root     pts/0        2018-04-12 23:03 (182.139.66.250)</span><br><span class="line">[root ~]# who mom likes</span><br><span class="line">root     pts/0        2018-04-12 23:03 (182.139.66.250)</span><br><span class="line">[root ~]# last</span><br><span class="line">root     pts/0        117.136.63.184   Sun May 26 18:57   still logged in   </span><br><span class="line">reboot   system boot  3.10.0-957.10.1. Mon May 27 02:52 - 19:10  (-7:-42)   </span><br><span class="line">root     pts/4        117.136.63.184   Sun May 26 18:51 - crash  (08:01)    </span><br><span class="line">root     pts/4        117.136.63.184   Sun May 26 18:49 - 18:49  (00:00)    </span><br><span class="line">root     pts/3        117.136.63.183   Sun May 26 18:35 - crash  (08:17)    </span><br><span class="line">root     pts/2        117.136.63.183   Sun May 26 18:34 - crash  (08:17)    </span><br><span class="line">root     pts/0        117.136.63.183   Sun May 26 18:10 - crash  (08:42)    </span><br></pre></td></tr></table></figure></li>
