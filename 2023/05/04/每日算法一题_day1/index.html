@@ -18,7 +18,7 @@
 <meta property="og:description" content="LeetCode的刷题日常（9.回文数）解题思路对于输入存在负号或多位数中个位为零不可能为回文数，直接返回false。 对于输入为正，将输入翻转，判断输入和翻转后结果是否相等并返回。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-05-03T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-04T06:02:21.630Z">
+<meta property="article:modified_time" content="2023-05-04T06:08:49.418Z">
 <meta property="article:author" content="Mr.SASAMI">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -216,7 +216,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">797字</span>
+      <span class="post-count">810字</span>
     </span>
   </span>
 
@@ -260,7 +260,7 @@
 <p>每次进行取余操作 （ %10），取出最低的数字：y = x % 10<br>将最低的数字加到取出数的末尾：revertNum = revertNum * 10 + y<br>每取一个最低位数字，x 都要自除以 10<br>判断 x 是不是小于 revertNum ，当它小于的时候，说明数字已经对半或者过半了<br>最后，判断奇偶数情况：如果是偶数的话，revertNum 和 x 相等；如果是奇数的话，最中间的数字就在revertNum 的最低位上，将它除以 10 以后应该和 x 相等。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isPalindrome(int x) &#123;</span><br><span class="line">        //思考：这里大家可以思考一下，为什么末尾为 0 就可以直接返回 false</span><br><span class="line">        if (x &lt; 0 || (x % 10 == 0 &amp;&amp; x != 0)) return false;</span><br><span class="line">        int revertedNumber = 0;</span><br><span class="line">        while (x &gt; revertedNumber) &#123;</span><br><span class="line">            revertedNumber = revertedNumber * 10 + x % 10;</span><br><span class="line">            x /= 10;</span><br><span class="line">        &#125;</span><br><span class="line">        return x == revertedNumber || x == revertedNumber / 10;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>中间对折只对比后半段翻转的结果和前半段是否相等很棒很巧妙。</p>
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>中间对折只对比后半段翻转的结果和前半段是否相等既减少了计算量又不会存在溢出问题，很棒。</p>
 
     
 
