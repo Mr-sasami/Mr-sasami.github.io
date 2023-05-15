@@ -18,7 +18,7 @@
 <meta property="og:description" content="Hot-100的刷题日常（接雨水）解题思路第一次做困难题，乍一看好像不难，思考了一会准备算个各个峰值。通过遍历找到各个峰值并计算相邻的两个峰之中较低的那个值与两峰之间各个数的差和来求得容量。但结果发现自己还是想岔了，真要用峰值来算也得先找到最高的峰，然后向其两端分别不断的找最高峰才行。后来看了解把这题当图形问题去想，发现只要计算数组分别映射到 x &#x3D; 0 和 x &#x3D; heightsize - 1">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-05-11T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-15T11:56:46.196Z">
+<meta property="article:modified_time" content="2023-05-15T11:57:54.351Z">
 <meta property="article:author" content="Mr.SASAMI">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -216,7 +216,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">506字</span>
+      <span class="post-count">526字</span>
     </span>
   </span>
 
@@ -242,7 +242,7 @@
 <p>当然也可以用双指针，从两端向数组最大值逼近，操作更少一点。<br>因为我写的指针都提前移动到了下一格，所以 while 里面不是 left &lt; right 。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">int trap(int* height, int heightSize)&#123;</span><br><span class="line">    int left = 0;</span><br><span class="line">    int right = heightSize - 1;</span><br><span class="line">    int left_max = 0;</span><br><span class="line">    int right_max = 0;</span><br><span class="line">    int rst = 0;</span><br><span class="line"></span><br><span class="line">    while(left &lt;= right)&#123;</span><br><span class="line">        if(left_max &lt; right_max)&#123;</span><br><span class="line">            if(left_max &lt; height[left])&#123;</span><br><span class="line">                left_max = height[left];</span><br><span class="line">            &#125;</span><br><span class="line">            rst += left_max - height[left];</span><br><span class="line">            left++;</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            if(right_max &lt; height[right])&#123;</span><br><span class="line">                right_max = height[right];</span><br><span class="line">            &#125;</span><br><span class="line">            rst += right_max - height[right];</span><br><span class="line">            right--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return rst;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>自己的第一种解法和官解的第一个思路很像，但官解用了动态规划，空间上更浪费点。<br>而我的图形解法没怎么浪费空间，但出解的时候直接 right_count + left_count 存在溢出的情况，so先减后加规避了一下。<br>第二种双指针解法就大同小异了。</p>
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>自己的第一种解法和官解的第一个思路很像，但官解用了动态规划，空间上更浪费点。<br>而我的图形解法没怎么浪费空间，但出解的时候直接 right_count + left_count 存在溢出的情况，so先减后加规避了一下。<br>第二种双指针解法就大同小异了。<br>第一次做困难题感觉还是花点时间可以啃啃的。</p>
 
     
 
