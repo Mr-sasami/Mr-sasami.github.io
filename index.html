@@ -216,11 +216,11 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="Hot-100的刷题日常（三数之和）"><a href="#Hot-100的刷题日常（三数之和）" class="headerlink" title="Hot-100的刷题日常（三数之和）"></a>Hot-100的刷题日常（三数之和）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>先上手暴力遍历后眉头微微一皱，才发现这题不能有重复解，泪目。<br>然后换了一种思路继续暴力法，先将数组进行排序如(-1, -1, 0, 0, 0, 1, 2)，然后三层循环暴力开搜！<br>针对前两层循环，两个指针的逻辑分别是：</p>
+    <h2 id="Hot-100的刷题日常（三数之和）"><a href="#Hot-100的刷题日常（三数之和）" class="headerlink" title="Hot-100的刷题日常（三数之和）"></a>Hot-100的刷题日常（三数之和）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>先上手暴力遍历后眉头微微一皱，才发现这题不能有重复解，泪目。<br>然后换了一种思路继续暴力法，先将数组进行排序如(-1, -1, 0, 0, 0, 1, 2)，然后三层循环暴力开搜！</p>
 <ul>
-<li><p>第一个指针 i 从左往右，当 nums[i] == nums[i-1] 的情况出现时continue去重。</p>
+<li><p>第一层 i 从左往右，当 nums[i] == nums[i-1] 的情况出现时continue去重。</p>
 </li>
-<li><p>第二个指针 j 从 i+1 开始往右，当 nums[j] == nums[j-1] 的情况出现时continue去重。</p>
+<li><p>第二层 j 从 i+1 开始往右，当 nums[j] == nums[j-1] 的情况出现时continue去重。</p>
 </li>
 </ul>
 <p>然后从 j+1 开始若数组中存在 0-nums[i]-nums[j] 即输出结果<br>这样可以确保 nums[i] &gt;= nums[j] &gt;= nums[k] 且每一个解都是唯一的。<br>而且当 nums[i] &gt; 0 或者 nums[i] + nums[j] &gt; 0 的时候必定无解，可以直接break。<br>结果执行超过时间限制，只能说厉害嗷。。。</p>
