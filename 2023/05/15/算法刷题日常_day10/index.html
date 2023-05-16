@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Mr-sasami.github.io">
-  <title>secret base</title>
+  <title>算法刷题日常_day10 | secret base</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content="..."> -->
-  
-  <meta name="description" content="...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="secret base">
-<meta property="og:url" content="https://mr-sasami.github.io/index.html">
+  <meta name="description" content="Hot-100的刷题日常（无重复字符的最长子串）解题思路看题后第一反应是kmp或哈希表，遍历一圈将遇到的字母及其所在的位置都保存下来。然后对于所有重复出现的字母，即哈希表中某字母的值为两个以上时，错位相减求得各相邻两点间距。最后取最大的间距即为无重复字符的最长子串的长度。若不存在重复出现的字母就直接返回字符串长度即可。然鹅想法很美好，跑了下后测试用例”aab”无情嘲笑我是个笨比。。。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法刷题日常_day10">
+<meta property="og:url" content="https://mr-sasami.github.io/2023/05/15/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day10/index.html">
 <meta property="og:site_name" content="secret base">
-<meta property="og:description" content="...">
+<meta property="og:description" content="Hot-100的刷题日常（无重复字符的最长子串）解题思路看题后第一反应是kmp或哈希表，遍历一圈将遇到的字母及其所在的位置都保存下来。然后对于所有重复出现的字母，即哈希表中某字母的值为两个以上时，错位相减求得各相邻两点间距。最后取最大的间距即为无重复字符的最长子串的长度。若不存在重复出现的字母就直接返回字符串长度即可。然鹅想法很美好，跑了下后测试用例”aab”无情嘲笑我是个笨比。。。">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-05-14T15:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-16T07:50:11.223Z">
 <meta property="article:author" content="Mr.SASAMI">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="secret base" type="application/atom+xml">
@@ -184,25 +183,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-算法刷题日常_day10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-算法刷题日常_day10" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/15/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day10/">算法刷题日常_day10</a>
-	
+    <h1 class="article-title" itemprop="name">
+      算法刷题日常_day10
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2023/05/15/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day10/" class="archive-article-date">
         <time datetime="2023-05-14T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-15</time>
 </a>
@@ -210,6 +209,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">348字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -217,13 +237,68 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h2 id="Hot-100的刷题日常（无重复字符的最长子串）"><a href="#Hot-100的刷题日常（无重复字符的最长子串）" class="headerlink" title="Hot-100的刷题日常（无重复字符的最长子串）"></a>Hot-100的刷题日常（无重复字符的最长子串）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>看题后第一反应是kmp或哈希表，遍历一圈将遇到的字母及其所在的位置都保存下来。<br>然后对于所有重复出现的字母，即哈希表中某字母的值为两个以上时，错位相减求得各相邻两点间距。<br>最后取最大的间距即为无重复字符的最长子串的长度。<br>若不存在重复出现的字母就直接返回字符串长度即可。<br>然鹅想法很美好，跑了下后测试用例”aab”无情嘲笑我是个笨比。。。</p>
-    
-    <a class="article-more-a" href="/2023/05/15/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day10/#more">more >></a>
-    
-    
+<span id="more"></span>
+<p>还是借鉴kmp的思路老老实实做人。。。<br>标记左右指针，在左右指针的范围中寻找有没有和右指针相同的字符。<br>若 i 位置存在相同字符，左指针跳转到 i+1 位置。<br>右指针依次递增，直到遇到’\n’后结束。<br>通过计算左右指针的差值来得到最大长度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int lengthOfLongestSubstring(char * s)&#123;</span><br><span class="line">    int left = 0;</span><br><span class="line">    int right = 0;</span><br><span class="line">    int max = 0;</span><br><span class="line"></span><br><span class="line">    while(s[right] != &#x27;\0&#x27;)&#123;</span><br><span class="line">        for(int i = left; i &lt; right; i++)&#123;</span><br><span class="line">            if(s[i] == s[right])&#123;</span><br><span class="line">                left = i + 1;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(right - left + 1 &gt; max)&#123;</span><br><span class="line">            max = right - left + 1;</span><br><span class="line">        &#125;</span><br><span class="line">        right++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>官解左指针做的递增没有跳过的处理，笨笨的，我真棒！</p>
 
     
 
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>感谢投喂猫粮<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Mr.SASAMI
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://Mr-sasami.github.io/2023/05/15/算法刷题日常_day10/" title="算法刷题日常_day10" target="_blank">https://Mr-sasami.github.io/2023/05/15/算法刷题日常_day10/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -244,16 +319,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/15/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day10/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://mr-sasami.github.io/2023/05/15/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day10/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/12/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法刷题日常_day9</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -274,813 +409,14 @@
 
 
 
-  
-    <article id="post-算法刷题日常_day9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/12/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day9/">算法刷题日常_day9</a>
-	
-    </h1>
-  
 
 
-  
-  
-<a href="/2023/05/12/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day9/" class="archive-article-date">
-        <time datetime="2023-05-11T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-12</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Hot-100的刷题日常（接雨水）"><a href="#Hot-100的刷题日常（接雨水）" class="headerlink" title="Hot-100的刷题日常（接雨水）"></a>Hot-100的刷题日常（接雨水）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>第一次做困难题，乍一看好像不难，思考了一会准备算个各个峰值。<br>通过遍历找到各个峰值并计算相邻的两个峰之中较低的那个值与两峰之间各个数的差和来求得容量。<br>但结果发现自己还是想岔了，真要用峰值来算也得先找到最高的峰，然后向其两端分别不断的找最高峰才行。<br>后来看了解把这题当图形问题去想，发现只要计算数组分别映射到 x = 0 和 x = heightsize - 1 这两条线上所形成的图形面积（s1, s2）的交集，<br>再计算数组原本的面积 s3 和全集的面积 s4 就可得 rst = s1 + s2 - s3 - s4 。<br>时间 O(n) 的复杂度。</p>
-    
-    <a class="article-more-a" href="/2023/05/12/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day9/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/12/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day9/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/11/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day8/">算法刷题日常_day8</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/11/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day8/" class="archive-article-date">
-        <time datetime="2023-05-10T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Hot-100的刷题日常（三数之和）"><a href="#Hot-100的刷题日常（三数之和）" class="headerlink" title="Hot-100的刷题日常（三数之和）"></a>Hot-100的刷题日常（三数之和）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>先上手暴力遍历后眉头微微一皱，才发现这题不能有重复解，泪目。<br>然后换了一种思路继续暴力法，先将数组进行排序如(-1, -1, 0, 0, 0, 1, 2)，然后三层循环暴力开搜！</p>
-<ul>
-<li><p>第一层 i 从左往右，当 nums[i] == nums[i-1] 的情况出现时continue去重。</p>
-</li>
-<li><p>第二层 j 从 i+1 开始往右，当 nums[j] == nums[j-1] 的情况出现时continue去重。</p>
-</li>
-</ul>
-<p>然后从 j+1 开始若数组中存在 0-nums[i]-nums[j] 即输出结果<br>这样可以确保 nums[i] &gt;= nums[j] &gt;= nums[k] 且每一个解都是唯一的。<br>而且当 nums[i] &gt; 0 或者 nums[i] + nums[j] &gt; 0 的时候必定无解，可以直接break。<br>结果执行超过时间限制，只能说厉害嗷。。。</p>
-    
-    <a class="article-more-a" href="/2023/05/11/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/11/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/10/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day7/">算法刷题日常_day7</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/10/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day7/" class="archive-article-date">
-        <time datetime="2023-05-09T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Hot-100的刷题日常（盛最多水的容器）"><a href="#Hot-100的刷题日常（盛最多水的容器）" class="headerlink" title="Hot-100的刷题日常（盛最多水的容器）"></a>Hot-100的刷题日常（盛最多水的容器）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>先拿两个for嵌套下，试了试看O(n^2)的暴力解法能不能跑起来，结果直接炸裂。</p>
-    
-    <a class="article-more-a" href="/2023/05/10/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day7/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/10/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day7/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/09/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day6/">算法刷题日常_day6</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/09/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day6/" class="archive-article-date">
-        <time datetime="2023-05-08T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Hot-100的刷题日常（移动零）"><a href="#Hot-100的刷题日常（移动零）" class="headerlink" title="Hot-100的刷题日常（移动零）"></a>Hot-100的刷题日常（移动零）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这题的分类是双指针，要在不复制数组的情况下原地对数组进行操作，但看了遍题目感觉双指针都不需要用。<br>个人的想法是只需要计0出现的数量为n，在遇到数组中非0的数时，将其位置向前跳跃n个位置就可以了。<br>最后再将数组末尾n个数置换为0即可，遍历一遍就可完成。</p>
-    
-    <a class="article-more-a" href="/2023/05/09/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day6/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/09/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day6/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/08/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day5/">算法刷题日常_day5</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/08/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day5/" class="archive-article-date">
-        <time datetime="2023-05-07T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-08</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Hot-100的刷题日常（最长连续序列）"><a href="#Hot-100的刷题日常（最长连续序列）" class="headerlink" title="Hot-100的刷题日常（最长连续序列）"></a>Hot-100的刷题日常（最长连续序列）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>最初的想法是将每个值如1视为一个点(1,1)，而相连的点如1，2，3可以组成线段（1，3）。<br>会和外界接触的只有线段两端，所以线段的情报只需要保存在两边的端点上就行了。<br>然后每插入一个新的点时，这个点根据连接数可分为连接点，端点，孤立点这三种情况。<br>连接点和端点的情况下更新所处新线段的两端点。</p>
-    
-    <a class="article-more-a" href="/2023/05/08/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day5/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/08/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day5/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/07/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day4/">算法刷题日常_day4</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/07/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day4/" class="archive-article-date">
-        <time datetime="2023-05-06T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-07</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Hot-100的刷题日常（字母异位词分组）"><a href="#Hot-100的刷题日常（字母异位词分组）" class="headerlink" title="Hot-100的刷题日常（字母异位词分组）"></a>Hot-100的刷题日常（字母异位词分组）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>用哈希表，最初在key的设计上纠结了一下<br>想的第一种是简单些，就给每个单词排序，字母异位词在排序后都会相同。<br>第二种是能不能编码使得单词在字母异位的情况下生成的编码都相同。</p>
-    
-    <a class="article-more-a" href="/2023/05/07/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day4/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/07/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day4/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/06/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day3/">算法刷题日常_day3</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/06/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day3/" class="archive-article-date">
-        <time datetime="2023-05-05T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="Hot-100的刷题日常（两数之和）"><a href="#Hot-100的刷题日常（两数之和）" class="headerlink" title="Hot-100的刷题日常（两数之和）"></a>Hot-100的刷题日常（两数之和）</h2><p>按部就班题库按难度慢慢刷好像没什么效率，请教了老司机之后准备开刷Hot-100</p>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>第一反应就是遍历数组中各个元素，找数组中剩余的数有没有能相加组成目标值的。</p>
-    
-    <a class="article-more-a" href="/2023/05/06/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/06/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/05/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day2/">算法刷题日常_day2</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/05/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day2/" class="archive-article-date">
-        <time datetime="2023-05-04T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-05</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="LeetCode的刷题日常（13-罗马数字转整数）"><a href="#LeetCode的刷题日常（13-罗马数字转整数）" class="headerlink" title="LeetCode的刷题日常（13.罗马数字转整数）"></a>LeetCode的刷题日常（13.罗马数字转整数）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>从后往前遍历字符串中的字符并转化为对应的数值并求和，当罗马数字中小的数字在大的数字的左边时（即左边的数小于右边的数）减去左边小的数值。</p>
-    
-    <a class="article-more-a" href="/2023/05/05/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/05/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法刷题日常_day1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/05/04/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day1/">算法刷题日常_day1</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/05/04/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day1/" class="archive-article-date">
-        <time datetime="2023-05-03T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="LeetCode的刷题日常（9-回文数）"><a href="#LeetCode的刷题日常（9-回文数）" class="headerlink" title="LeetCode的刷题日常（9.回文数）"></a>LeetCode的刷题日常（9.回文数）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>对于输入存在负号或多位数中个位为零不可能为回文数，直接返回false。</p>
-<p>对于输入为正，将输入翻转，判断输入和翻转后结果是否相等并返回。</p>
-    
-    <a class="article-more-a" href="/2023/05/04/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/05/04/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E5%B8%B8_day1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -1120,8 +456,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
