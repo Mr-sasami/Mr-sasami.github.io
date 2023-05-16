@@ -18,7 +18,7 @@
 <meta property="og:description" content="Hot-100的刷题日常（无重复字符的最长子串）解题思路看题后第一反应是kmp或哈希表，遍历一圈将遇到的字母及其所在的位置都保存下来。然后对于所有重复出现的字母，即哈希表中某字母的值为两个以上时，错位相减求得各相邻两点间距。最后取最大的间距即为无重复字符的最长子串的长度。若不存在重复出现的字母就直接返回字符串长度即可。然鹅想法很美好，跑了下后测试用例”aab”无情嘲笑我是个笨比。。。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-05-14T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-16T07:50:11.223Z">
+<meta property="article:modified_time" content="2023-05-16T07:56:10.870Z">
 <meta property="article:author" content="Mr.SASAMI">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -216,7 +216,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">348字</span>
+      <span class="post-count">350字</span>
     </span>
   </span>
 
@@ -238,7 +238,7 @@
     
     <h2 id="Hot-100的刷题日常（无重复字符的最长子串）"><a href="#Hot-100的刷题日常（无重复字符的最长子串）" class="headerlink" title="Hot-100的刷题日常（无重复字符的最长子串）"></a>Hot-100的刷题日常（无重复字符的最长子串）</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>看题后第一反应是kmp或哈希表，遍历一圈将遇到的字母及其所在的位置都保存下来。<br>然后对于所有重复出现的字母，即哈希表中某字母的值为两个以上时，错位相减求得各相邻两点间距。<br>最后取最大的间距即为无重复字符的最长子串的长度。<br>若不存在重复出现的字母就直接返回字符串长度即可。<br>然鹅想法很美好，跑了下后测试用例”aab”无情嘲笑我是个笨比。。。</p>
 <span id="more"></span>
-<p>还是借鉴kmp的思路老老实实做人。。。<br>标记左右指针，在左右指针的范围中寻找有没有和右指针相同的字符。<br>若 i 位置存在相同字符，左指针跳转到 i+1 位置。<br>右指针依次递增，直到遇到’\n’后结束。<br>通过计算左右指针的差值来得到最大长度。</p>
+<p>还是借鉴kmp的思路老老实实做人。。。<br>标记左右指针，在左右指针的范围中寻找有没有和右指针相同的字符。<br>若 i 位置存在相同字符，左指针跳转到 i+1 位置。<br>通过计算左右指针的差值来得到最大长度，右指针依次递增最后直到遇到’\0’后结束。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int lengthOfLongestSubstring(char * s)&#123;</span><br><span class="line">    int left = 0;</span><br><span class="line">    int right = 0;</span><br><span class="line">    int max = 0;</span><br><span class="line"></span><br><span class="line">    while(s[right] != &#x27;\0&#x27;)&#123;</span><br><span class="line">        for(int i = left; i &lt; right; i++)&#123;</span><br><span class="line">            if(s[i] == s[right])&#123;</span><br><span class="line">                left = i + 1;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(right - left + 1 &gt; max)&#123;</span><br><span class="line">            max = right - left + 1;</span><br><span class="line">        &#125;</span><br><span class="line">        right++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>官解左指针做的递增没有跳过的处理，笨笨的，我真棒！</p>
