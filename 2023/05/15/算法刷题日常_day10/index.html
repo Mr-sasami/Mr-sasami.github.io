@@ -18,7 +18,7 @@
 <meta property="og:description" content="Hot-100的刷题日常（无重复字符的最长子串）解题思路看题后第一反应是kmp或哈希表，遍历一圈将遇到的字母及其所在的位置都保存下来。然后对于所有重复出现的字母，即哈希表中某字母的值为两个以上时，错位相减求得各相邻两点间距。最后取最大的间距即为无重复字符的最长子串的长度。若不存在重复出现的字母就直接返回字符串长度即可。然鹅想法很美好，跑了下后测试用例”aab”无情嘲笑我是个笨比。。。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-05-14T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-16T07:56:10.870Z">
+<meta property="article:modified_time" content="2023-05-16T07:59:11.313Z">
 <meta property="article:author" content="Mr.SASAMI">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -742,8 +742,8 @@
        position: "right", 
        width: 145, 
        height: 315, 
-       hOffset: 50, 
       
+       vOffset: 15 
     },
     mobile: {
        show: false, 
